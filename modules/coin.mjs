@@ -42,10 +42,11 @@ function coinFlip() {
     ]
  */
 
+// fix to add if null then add single element to tosses
 function coinFlips(number) {
   let tosses = []
   if(number == null) {
-    return coinFlip();
+    number = 1;
   }
   
   for (var i = 0; i < number; i++) {
@@ -94,12 +95,15 @@ function countFlips(array) {
  */
 
 function flipACoin(call) {
+  if(call == null) {
+    return('Error: no input') //return error no input
+  }
   let flip = coinFlip()
-  result = 'lose'
+  let result = 'lose'
   if(flip == call) {
     result = 'win'
   }
-  return('call: ' + call + ', flip: ' + flip + ', result: ' + result)
+  return("{ call: '" + call + "', flip: '" + flip + "', result: '" + result + "' }")
 }
 
 
