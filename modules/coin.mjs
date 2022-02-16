@@ -42,12 +42,17 @@ function coinFlip() {
     ]
  */
 
-function coinFlips(flips) {
-  let tosses = []
-  for(let i = 0; i < flips; i++) {
-    tosses[i] = coinFlip();
+function coinFlips(number) {
+  if(number == null) {
+    return coinFlip();
   }
-    
+  let tosses = []
+  
+  for (var i = 0; i < number; i++) {
+    tosses[i] = coinFlip()
+  }
+ 
+  return tosses;
   
 }
 

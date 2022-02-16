@@ -8,7 +8,6 @@
     "flips": "node flips.js",
     "guess-flip": "node guess-flip.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-
   },
   "repository": {
     "type": "git",
@@ -20,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/comp426-2022-spring/a02-brooksat/issues"
   },
-  "homepage": "https://github.com/comp426-2022-spring/a02-brooksat#readme"
+  "homepage": "https://github.com/comp426-2022-spring/a02-brooksat#readme",
+  "dependencies": {
+    "minimist": "^1.2.5"
+  }
 }
