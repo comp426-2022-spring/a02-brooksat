@@ -45,7 +45,7 @@ function coinFlip() {
 function coinFlips(number) {
   let tosses = []
   if(number == null) {
-    return tosses[coinFlip()]
+    return coinFlip();
   }
   
   for (var i = 0; i < number; i++) {
