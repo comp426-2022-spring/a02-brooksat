@@ -43,16 +43,16 @@ function coinFlip() {
  */
 
 function coinFlips(number) {
-  if(number == null) {
-    return coinFlip();
-  }
   let tosses = []
+  if(number == null) {
+    return tosses[coinFlip()]
+  }
   
   for (var i = 0; i < number; i++) {
     tosses[i] = coinFlip()
   }
  
-  return tosses;
+  return tosses
   
 }
 
