@@ -80,7 +80,14 @@ function countFlips(array) {
       count_heads++;
     }
   }
+  
+  if(count_tails == 0) {
+    return('{ heads: ' + count_heads + ' }')
+  } else if (count_heads == 0) {
+    return('{ tails: ' + count_tails + ' }')
+  } else {
   return('{ heads: ' + count_heads + ', tails: ' + count_tails + ' }')
+  }
 }
 
 /** Flip a coin!
@@ -95,7 +102,7 @@ function countFlips(array) {
  */
 
 function flipACoin(call) {
-  if(call == null) {
+  if(call == null || call != 'heads' || call != 'tails') {
     return('Error: no input') //return error no input
   }
   let flip = coinFlip()
