@@ -80,7 +80,7 @@ function countFlips(array) {
       count_heads++;
     }
   }
-  
+
   if(count_tails == 0) {
     return('{ heads: ' + count_heads + ' }')
   } else if (count_heads == 0) {
@@ -102,15 +102,21 @@ function countFlips(array) {
  */
 
 function flipACoin(call) {
-  if(call == null || call != 'heads' || call != 'tails') {
+  if(call == null) {
     return('Error: no input') //return error no input
   }
-  let flip = coinFlip()
-  let result = 'lose'
-  if(flip == call) {
-    result = 'win'
+  if(call == 'heads' || call == 'tails') {
+    let flip = coinFlip()
+    let result = 'lose'
+    if(flip == call) {
+      result = 'win'
+    }
+    return("{ call: '" + call + "', flip: '" + flip + "', result: '" + result + "' }")
+  } else {
+    return('Usage: node guess-flip.js --call= [heads | tails]')
+
   }
-  return("{ call: '" + call + "', flip: '" + flip + "', result: '" + result + "' }")
+  
 }
 
 
