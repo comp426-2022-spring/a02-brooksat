@@ -113,7 +113,7 @@ function flipACoin(call) {
     }
     return("{ call: '" + call + "', flip: '" + flip + "', result: '" + result + "' }")
   } else {
-    return('Usage: node guess-flip.js --call= [heads | tails]')
+    return('Usage: node guess-flip.js --call=[heads | tails]')
 
   }
   
