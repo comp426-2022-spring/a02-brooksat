@@ -44,17 +44,11 @@ function coinFlip() {
 
 // fix to add if null then add single element to tosses
 function coinFlips(number) {
-  let tosses = []
-  if(number == null) {
-    number = 1;
-  }
-  
+  var tosses = []
   for (var i = 0; i < number; i++) {
-    tosses[i] = coinFlip()
+    tosses.push(coinFlip())
   }
- 
   return tosses
-  
 }
 
 /** Count multiple flips

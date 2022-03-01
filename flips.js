@@ -5,11 +5,13 @@ const require = createRequire(import.meta.url)
 
 
 
-const args = require('minimist')(process.argv.slice(2))
+let args = require('minimist')(process.argv.slice(2))
 
-args['number']
+let number = args['number'] || 1
 
-var coin_flips = coinFlips(args.number)
+
+
+var coin_flips = coinFlips(number)
 console.log(coin_flips)
 
 var count_flips = countFlips(coin_flips)
